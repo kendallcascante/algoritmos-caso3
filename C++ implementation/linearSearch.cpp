@@ -11,9 +11,7 @@ const int MIN_RANDOM = 1;
 bool linearSearch(int value, int array[], int lenght) {
     bool found = false;
     for(int index=0; index<lenght; index++) { 
-        cout << "In for " << index << " " << array[index] << endl;
         if(array[index]==value) {
-            cout << "In function " << index << array[index] << endl;
             found = true;
             break;
         }
