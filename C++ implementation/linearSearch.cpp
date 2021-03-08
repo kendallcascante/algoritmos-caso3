@@ -1,6 +1,4 @@
 #include <iostream>
-#include <stdlib.h>
-#include <array>
 
 using namespace std;
 
@@ -10,6 +8,7 @@ const int MIN_RANDOM = 1;
 
 bool linearSearch(int value, int array[]) {
     bool found = false;
+    
     for(int index=0; index<ARRAY_LENGHT; index++) { 
         if(array[index]==value) {
             found = true;
@@ -19,16 +18,19 @@ bool linearSearch(int value, int array[]) {
     return found;
 }
 
-int main() {
+int main()
+{ 
     int array[ARRAY_LENGHT];
-
+    
     for(int index=0; index<ARRAY_LENGHT; index++) {
-        array[index] = MIN_RANDOM + rand() % (MAX_RANDOM - MIN_RANDOM + 1);
+        array[index] = rand() % (MAX_RANDOM-MIN_RANDOM+1) + MIN_RANDOM;
     }
 
     if(linearSearch(200000, array)) {
-        cout << "Value was found :)" << endl;
+        cout << "Value was found :)";
     } else {
-        cout << "Value was not found :(" << endl;
+        cout << "Value was not found :(";
     }
+    
+    return 0;
 }
