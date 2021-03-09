@@ -1,7 +1,7 @@
 extern crate rand;
 use rand::Rng;
 
-const ARRAY_LENGHT: usize = 500000;
+const ARRAY_LENGHT: usize = 100000;
 const MAX_RANDOM: i32 = 100000;
 const MIN_RANDOM: i32 = 1;
 

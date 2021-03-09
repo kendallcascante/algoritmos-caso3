@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <time.h> 
 
-const int ARRAY_LENGHT = 500000;
+const int ARRAY_LENGHT = 100000;
 const int MAX_RANDOM = 100000;
 const int MIN_RANDOM = 1;
 
