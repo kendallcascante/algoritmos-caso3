@@ -19,7 +19,12 @@ fn linear_search(value: i32, array: [i32; ARRAY_LENGHT]) -> bool {
 }
 
 fn main(){
-    let array: [i32; ARRAY_LENGHT] = [rand::thread_rng().gen_range(MIN_RANDOM,MAX_RANDOM); ARRAY_LENGHT];
+    let mut array: [i32; ARRAY_LENGHT] = [0; ARRAY_LENGHT];
+    let mut index: usize = 0;
+    while index < ARRAY_LENGHT {
+        array[index] = rand::thread_rng().gen_range(MIN_RANDOM,MAX_RANDOM);
+        index = index + 1;
+    }
 
     if linear_search(200000,array) {
         println!("Value was found :)");

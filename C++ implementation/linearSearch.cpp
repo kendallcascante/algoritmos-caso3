@@ -1,4 +1,5 @@
 #include <iostream>
+#include <time.h> 
 
 using namespace std;
 
@@ -20,17 +21,23 @@ bool linearSearch(int value, int array[]) {
 
 int main()
 { 
+    //time_t timeI = time(NULL);
+
     int array[ARRAY_LENGHT];
     
     for(int index=0; index<ARRAY_LENGHT; index++) {
+    	cout << "Delay" << endl;
         array[index] = rand() % (MAX_RANDOM-MIN_RANDOM+1) + MIN_RANDOM;
     }
 
     if(linearSearch(200000, array)) {
-        cout << "Value was found :)";
+        cout << "Value was found :)" << endl;
     } else {
-        cout << "Value was not found :(";
+        cout << "Value was not found :(" << endl;
     }
+    
+    //time_t timeF = time(NULL);
+    //cout << "Tiempo: " << timeF-timeI << " segundos";
     
     return 0;
 }

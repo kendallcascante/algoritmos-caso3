@@ -21,12 +21,13 @@ bool linearSearch(int value, int array[]) {
 
 int main()
 {
-    time_t timeI = time(NULL);
+    //time_t timeI = time(NULL);
     
     int array[ARRAY_LENGHT];
     int index;
     
     for(index=0; index<ARRAY_LENGHT; index++) {
+    	printf("Delay \n");
         array[index] = rand() % (MAX_RANDOM-MIN_RANDOM+1) + MIN_RANDOM;
     }
 
@@ -36,9 +37,9 @@ int main()
         printf("Value was not found :(\n\n");
     }
     
-    time_t timeF = time(NULL);
+    //time_t timeF = time(NULL);
     
-    printf("Tiempo: %ld\n", timeF-timeI);
+    //printf("Tiempo: %ld\n", timeF-timeI, " segundos");
     
     return 0;
 }
