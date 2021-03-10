@@ -1,5 +1,6 @@
 extern crate rand;
 use rand::Rng;
+use std::time::{Duration, Instant};
 
 const ARRAY_LENGHT: usize = 100000;
 const MAX_RANDOM: i32 = 100000;
@@ -19,6 +20,8 @@ fn linear_search(value: i32, array: [i32; ARRAY_LENGHT]) -> bool {
 }
 
 fn main(){
+    let start = Instant::now();
+
     let mut array: [i32; ARRAY_LENGHT] = [0; ARRAY_LENGHT];
     let mut index: usize = 0;
     while index < ARRAY_LENGHT {
@@ -31,4 +34,7 @@ fn main(){
     } else {
         println!("Value was not found :(");
     }
+
+    let duration = start.elapsed();
+    println!("Tiempo: {:?}", duration);
 }
