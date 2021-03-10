@@ -3,14 +3,14 @@
 #include <stdbool.h>
 #include <time.h> 
 
-const int ARRAY_LENGHT = 100000;
+const long int ARRAY_LENGHT = 500000;
 const int MAX_RANDOM = 100000;
 const int MIN_RANDOM = 1;
 
 bool linearSearch(int value, int array[]) {
     bool found = false;
-    int index;
-    for(index=0; index<ARRAY_LENGHT; index++) { 
+    for(int index=0; index<ARRAY_LENGHT; index++) { 
+        printf(" ");
         if(array[index]==value) {
             found = true;
             break;
@@ -21,25 +21,20 @@ bool linearSearch(int value, int array[]) {
 
 int main()
 {
-    //time_t timeI = time(NULL);
-    
+    time_t start = time(NULL);
     int array[ARRAY_LENGHT];
-    int index;
-    
-    for(index=0; index<ARRAY_LENGHT; index++) {
-    	printf("Delay \n");
+
+    for(int index=0; index<ARRAY_LENGHT; index++) {
         array[index] = rand() % (MAX_RANDOM-MIN_RANDOM+1) + MIN_RANDOM;
     }
 
     if(linearSearch(200000, array)) {
-        printf("Value was found :)\n\n");
+        printf("\nValue was found :)\n\n");
     } else {
-        printf("Value was not found :(\n\n");
+        printf("\nValue was not found :(\n\n");
     }
     
-    //time_t timeF = time(NULL);
-    
-    //printf("Tiempo: %ld\n", timeF-timeI, " segundos");
-    
+    time_t end = time(NULL);
+    printf("Time elapsed is %d seconds", (end - start));
     return 0;
 }
