@@ -10,6 +10,7 @@ fn linear_search(value: i32, array: [i32; ARRAY_LENGHT]) -> bool {
     let mut found = false;
     let mut index: usize = 0;
     while index < ARRAY_LENGHT {
+        println!(" ");
         if array[index] == value{
             found = true;
             break;
