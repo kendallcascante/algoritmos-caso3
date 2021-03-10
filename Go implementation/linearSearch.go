@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-const ARRAY_LENGHT int = 500000
+const ARRAY_LENGHT int = 100000
 const MAX_RANDOM = 100000
 const MIN_RANDOM = 1
 
