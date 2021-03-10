@@ -39,4 +39,6 @@ int main() {
     double time_taken = double(end - start); 
     cout << "Time taken by program is : " << fixed << time_taken << "sec";
     
+    return 0;
+        
 }
